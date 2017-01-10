@@ -1,0 +1,31 @@
+
+# home = []
+# away = []
+# total = 0
+# n = input();
+# for i in range(0,n):
+# 	line = raw_input().split()
+# 	home.append(int(line[0]))
+# 	away.append(int(line[1]))
+
+# for i in home:
+# 	for j in away:
+# 		if i == j:
+# 			total+=1
+
+# print total
+
+res = []
+string = ""
+total = 0
+n = input();
+for i in range(0,n):
+	line = raw_input()
+	if i == 0 or string[1] != line[0]:
+		string+=line
+	elif string[1] == line[0]:
+		res.append(string)
+		string=line		
+		total+=1
+
+print len(res)+1
